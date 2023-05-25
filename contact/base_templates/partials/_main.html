@@ -1,0 +1,57 @@
+{% load static %}
+<main class='main-container'>
+
+    <header class='post-header-container'>
+        <div class='post-header-titles'>
+            <h2>Name</h2>
+            <div></div>
+            <h2>Phone</h2>
+            <div></div>
+            <h2>Email</h2>
+            <div></div>
+            <h2>Adress</h2>
+        </div>
+        <div class='post-header-figure'>
+            <a href="{% url 'contact:create' %}">
+                <figure>
+                    <img 
+                    src="{% static 'images/icon_add.png' %}" 
+                    alt="Image to add a post"
+                    >
+                </figure>
+            </a>
+        </div>
+    </header>
+
+    {% if contacts %}
+        {% for contact in contacts %}
+            <div class='post-container'>
+                <div class='post-line'></div>
+                <section class='post'>
+                    <div class='post-infos'>
+                        <h2>{{contact.name}}</h2>
+                        <div></div>
+                        <h2>{{contact.phone}}</h2>
+                        <div></div>
+                        <h2>{{contact.email}}</h2>
+                        <div></div>
+                        <h2>{{contact.address}}</h2>
+                    </div>
+                    <div class='post-figure'>
+                        <a href="{% url 'contact:edit' contact.id %}">
+                            <figure>
+                                <img 
+                                src="{% static 'images/icon_edit.png' %}" 
+                                alt="Image to edit a post"
+                                >
+                            </figure>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No contacts available</p>
+    {% endif %}
+
+</main>

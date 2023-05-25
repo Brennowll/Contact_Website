@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Archivo-Black;
+    src: url(../fonts/ArchivoBlack-Regular.ttf);
+}
+
+@font-face {
+    font-family: Archivo-Narrow;
+    src: url(../fonts/ArchivoNarrow.ttf);
+}
+
+body {
+    background-color: #EDE9E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-background {
+    width: 80%;
+    height: 80%;
+    background-color: #2E1E45;
+    box-shadow: 16px 16px #FF695C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inside {
+    height: 35%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-header {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-header div {
+    display: flex;
+    width: auto;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    background-color: #612A52;
+    border-radius: 5px;
+    color: #EDE9E9;
+    font-family: Archivo-Black;
+    font-size: x-large;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-inside form {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-labels-inputs {
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-labels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-labels label {
+    font-family: Archivo-Narrow;
+    font-size: x-large;
+    color: #EDE9E9;
+    padding-left: 15px;
+    border-left: 2px solid #612A52 ;
+    height: 100%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.container-inputs {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-inputs input {
+    height: 20%;
+}
+
+.container-buttons {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button-save-container {
+    height: 60%;
+}
+
+.button-save {
+    background-color: #612A52;
+    color: #EDE9E9;
+    font-family: Archivo-Narrow;
+    font-size: medium;
+    width: 80px;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons-nav {
+    display: flex;
+    flex-direction: row;
+    color: #EDE9E9;
+    font-family: Archivo-Narrow;
+    font-size: medium;
+}
+
+.count-contacts {
+    margin: 3px;
+}
+
+.buttons-nav button {
+    background-color: #FF695C;
+    color: #EDE9E9;
+    font-family: Archivo-Narrow;
+    font-size: medium;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+}

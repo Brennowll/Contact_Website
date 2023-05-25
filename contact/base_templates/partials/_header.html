@@ -1,0 +1,16 @@
+<header class='header-container'>
+    <a href="{% url 'contact:home' %}">
+        <h1 class='header-title'>
+            CONTACTS
+        </h1>
+    </a>
+    <form action="{% url 'contact:search' %}" method="GET">
+        <input 
+        type="text" 
+        name="q" 
+        id="search" 
+        placeholder="Search"
+        value={{ request.GET.q|default:"" }}
+        >
+    </form>
+</header>

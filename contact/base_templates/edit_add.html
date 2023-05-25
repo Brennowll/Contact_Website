@@ -1,0 +1,62 @@
+{% include 'partials/base.html' %}
+
+    <main class='container-background'>
+        <div class='link_back'>
+
+        </div>
+
+        <div class='container-inside'>
+
+            <header class='container-header'>
+                <div>
+                    <h1>{{ title }}</h1>
+                </div>
+            </header>
+
+            <form action="." method="POST"> {% csrf_token %}
+
+                <div class='container-labels-inputs'>
+                    <div class='container-labels'>
+                        <label for="name">Name</label>
+                        <label for="phone">Phone</label>
+                        <label for="email">Email</label>
+                        <label for="category">Adress</label>
+                    </div>
+                    {% if edit is True %}
+                        <div class='container-inputs'>
+                            <input type="text" name="name" id="name" value={{contact.name}}>
+                            <input type="text" name="phone" id="phone" value={{contact.phone}}>
+                            <input type="text" name="email" id="email" value={{contact.email}}>
+                            <input type="text" name="address" id="address" value={{contact.address}}>
+                        </div>
+                    {% else %}
+                        <div class='container-inputs'>
+                            <input type="text" name="name" id="name">
+                            <input type="text" name="phone" id="phone">
+                            <input type="text" name="email" id="email">
+                            <input type="text" name="address" id="address">
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class='container-buttons'>
+                    <div class='button-save-container'>
+                        <button class='button-save'>Save</button>
+                    </div>
+                    <div class='buttons-nav'>
+                        {% if edit is True %}
+                            <button class='button'>Prev</button>
+                            <p class='count-contacts'>1/??</p>
+                            <button class='button'>Next</button>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
